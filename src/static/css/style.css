@@ -3,12 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Plus Jakarta Sans,-apple-system,system-ui,BlinkMacSystemFont,Helvetica,Arial,Segoe UI,Roboto,sans-serif !important;
+    font-family: Arial, sans-serif;
+    /*font-family: Plus Jakarta Sans,-apple-system,system-ui,BlinkMacSystemFont,Helvetica,Arial,Segoe UI,Roboto,sans-serif !important;*/
 }
 
 body {
-    /*font-family: Arial, sans-serif;*/
-    font-family: Plus Jakarta Sans,-apple-system,system-ui,BlinkMacSystemFont,Helvetica,Arial,Segoe UI,Roboto,sans-serif !important;
+    font-family: Arial, sans-serif;
+    /*font-family: Plus Jakarta Sans,-apple-system,system-ui,BlinkMacSystemFont,Helvetica,Arial,Segoe UI,Roboto,sans-serif !important;*/
     line-height: 1.6;
 }
 

@@ -12,6 +12,67 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/about.html"
+        label: "About Page"
+        name: "about"
+        format: frontmatter
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Intro Text", name: "intro_text", widget: "text" }
+          - label: "Gallery Descriptions"
+            name: "gallery_descriptions"
+            widget: list
+            field: { label: Description, name: desc, widget: string }
+      - file: "src/contact.html"
+        label: "Contact Page"
+        name: "contact"
+        format: frontmatter
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+      - file: "src/PMP-Training.html"
+        label: "PMP-Course Page"
+        name: "PMP-Training"
+        format: frontmatter
+        fields:
+            - { label: "Overview Text", name: "overview_text", widget: "markdown" }
+      - file: "src/CAPM-Training.html"
+        label: "CAPM-Course Page"
+        name: "CAPM-Training"
+        format: frontmatter
+        fields:
+          - { label: "Overview Text", name: "overview_text", widget: "markdown" }
+      - file: "src/scrummaster-course.html"
+        label: "Scrummaster-Course Page"
+        name: "Scrummaster-Course"
+        format: frontmatter
+        fields:
+          - { label: "Overview Text", name: "overview_text", widget: "markdown" }
+      - file: "src/predictive-projects-course.html"
+        label: "Predictive Projects Course Page"
+        name: "Predictive-Projects-Course"
+        format: frontmatter
+        fields:
+          - { label: "Overview Text", name: "overview_text", widget: "markdown" }
+      - file: "src/ms-project-course.html"
+        label: "Ms Projects Course Page"
+        name: "Ms-Projects-Course"
+        format: frontmatter
+        fields:
+          - { label: "Overview Text", name: "overview_text", widget: "markdown" }
+      - file: "src/digital-skills-course.html"
+        label: "Digital Skills Course Page"
+        name: "Digital-Skills-Course"
+        format: frontmatter
+        fields:
+          - { label: "Overview Text", name: "overview_text", widget: "markdown" }
+
+
+
   - label: "Blog"
     name: "blog"
     folder: "src/posts"

@@ -4,19 +4,225 @@ title: Neat Starter
 path: home
 ---
 
-<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
-  <h1>
-    Welcome to
-    <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-      {{title}}
-    </strong>
-  </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses | MiAcademy</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+</head>
+<body>
 
-  <p>
-    <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>
-    Starter Template. Get Started by editing.
-    <code class="bg-gray-100 text-blue-800 p-1">/index.njk</code>
-  </p>
 
-  {% include "./_includes/partials/content.html" %}
+<!-- Automatic Slideshow Begins -->
+<div class="homepage-slideshow">
+  <div class="slide-wrapper">
+    <img src="static/img/bright-image5.png" alt="Elevate Your Career Today">
+    <div class="slide-text">Elevate Your Career Today</div>
+  </div>
+  <div class="slide-wrapper">
+    <img src="static/img/bright-image3.png" alt="Courses For Your Career Growth">
+    <div class="slide-text">Courses For Your Career Growth</div>
+  </div>
+  <div class="slide-wrapper">
+    <img src="static/img/bright-image6.png" alt="Supporting You in Your Learning">
+    <div class="slide-text">Supporting You in Your Learning</div>
+  </div>
+  <div class="slide-wrapper">
+    <img src="static/img/bright-image4.png" alt="Take a Course for Full Certification">
+    <div class="slide-text">Take a Course for Full Certification</div>
+  </div>
+
+  <button class="prev" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="next" onclick="plusDivs(+1)">&#10095;</button>
 </div>
+
+
+<script>
+  let slideIndex = 1;
+  let autoSlideInterval;
+
+  function showSlide(n) {
+    const slides = document.getElementsByClassName("slide-wrapper");
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
+
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("active-slide");
+    }
+    slides[slideIndex - 1].classList.add("active-slide");
+  }
+
+  function plusDivs(n) {
+    slideIndex += n;
+    showSlide(slideIndex);
+    resetAutoSlide(); // So users don't get confused while clicking
+  }
+
+  function autoSlide() {
+    slideIndex++;
+    showSlide(slideIndex);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(autoSlide, 5000);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    showSlide(slideIndex);
+    autoSlideInterval = setInterval(autoSlide, 5000);
+  });
+</script>
+
+
+<!-- Automatic Slideshow Ends -->
+
+
+<div class="main-content">
+
+  <section class="homepage-contact-cta">
+    <h2>Have Questions?</h2>
+    <p>We’re here to help you take the next step.</p>
+    <a class="cta-button" href="/contact/">Contact Us</a>
+  </section>
+  <!-- Contact Ends -->
+
+  <!--Main Heading Beings-->
+  <main>
+    <section class="intro">
+      <h1>Education Courses</h1>
+    </section>
+  </main>
+  <!--Main Heading Ends-->
+
+  <!-- Gallery Begins -->
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="/scrummaster-exam-prep-course/">
+        <img src="static/img/PMP® Exam Prep Course.png" alt="ScrumMaster Exam Prep Course">
+      </a>
+      <div class="desc">ScrumMaster Exam Prep Course</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="/PMP-Training/">
+        <img src="static/img/PMP® Exam Prep Course-2.png" alt="PMP® Exam Prep Course">
+
+      </a>
+      <div class="desc">PMP® Exam Prep Course</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="/CAPM-Training/">
+        <img src="static/img/PMP® Exam Prep Course-3.png" alt="CAPM® Exam Prep Course">
+
+      </a>
+      <div class="desc">CAPM® Exam Prep Course</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="/digital-skills-for-project-managers/">
+        <img src="static/img/PMP® Exam Prep Course-4.png" alt="Digital Skills for Project Managers">
+
+      </a>
+      <div class="desc">Digital Skills for Project Managers</div>
+    </div>
+  </div>
+
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="/microsoft-trainings-course/">
+        <img src="static/img/PMP® Exam Prep Course-6.png" alt="Ms Project & Excel Training">
+
+      </a>
+      <div class="desc">Ms Project & Excel Training</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="/predictive-projects-simulation-course/">
+        <img src="static/img/PMP® Exam Prep Course-5.png" alt="Predictive Projects Simulation Course">
+
+      </a>
+      <div class="desc">Predictive Projects Simulation Course</div>
+    </div>
+  </div>
+
+  <div class="clearfix"></div>
+  <hr class="section-divider">
+  <!-- End of gallery -->
+  <!--Why Us Heading Beings-->
+  <main>
+    <section class="intro">
+      <h1>Why Us</h1>
+    </section>
+  </main>
+  <!--Why Us Heading Ends-->
+
+  <!-- Gallery Begins "Why Us"-->
+  <div class="responsive_why_us">
+    <div class="gallery">
+      <img src="static/img/kenny-eliason-1-aA2Fadydc-unsplash.jpg" alt="Learn From Experienced Mentors">
+      <div class="desc">Learn From Experienced Mentors</div>
+    </div>
+  </div>
+
+  <div class="responsive_why_us">
+    <div class="gallery">
+      <img src="/static/img/headway-5QgIuuBxKwM-unsplash.jpg" alt="Get Hands-on Experience">
+      <div class="desc">Get Hands-on Experience</div>
+    </div>
+  </div>
+
+  <div class="responsive_why_us">
+    <div class="gallery">
+      <img src="static/img/thisisengineering-h6gCRTCxM7o-unsplash.jpg" alt="On-going Support">
+      <div class="desc">On-going Support</div>
+    </div>
+  </div>
+
+  <div class="responsive_why_us">
+    <div class="gallery">
+      <img src="static/img/timur-shakerzianov-yCs7YTwEw2w-unsplash.jpg" alt="Engaging Courses">
+      <div class="desc">Engaging Courses</div>
+    </div>
+  </div>
+
+  <div class="clearfix"></div>
+  <!--<hr class="section-divider">-->
+  <!-- End of gallery "Why Us"-->
+
+  <!--Photo Gallery Heading Begins-->
+  <main>
+    <section class="intro">
+    </section>
+  </main>
+
+  <!-- End of Photo gallery -->
+
+  <hr class="section-divider">
+
+
+</div>
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('show');
+  }
+</script>
+
+</body>
+</html>

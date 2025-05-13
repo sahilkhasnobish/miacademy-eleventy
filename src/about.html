@@ -1,0 +1,60 @@
+---
+title: About
+layout: default
+permalink: /about/
+intro_text: testing to make sure this still works
+gallery_descriptions:
+  - testing image may 13
+  - another test
+  - test
+---
+
+
+<div class="main-content">
+    <section class="intro">
+        <h1>About Us</h1>
+    </section>
+    <hr class="section-divider">
+    <section class="courses">
+        <div class="course">
+            <h3>Why MiAcademy</h3>
+            <p>{{ intro_text }}</p>
+        </div>
+    </section>
+
+
+    <!--Main Heading Ends-->
+
+    <!--Why Us Heading Beings-->
+    <main>
+        <section class="intro">
+            <!--<h1>Why Us</h1>-->
+        </section>
+    </main>
+    <!--Why Us Heading Ends-->
+    <!-- Gallery Begins "Why Us"-->
+    <div class="responsive_about_us">
+        <div class="gallery">
+            <img class="contact-image" src="/static/img/scott-graham-5fNmWej4tAA-unsplash.jpg" alt="about image 1">
+            <div class="desc">{{ gallery_descriptions[0] }}</div>
+        </div>
+    </div>
+
+    <div class="responsive_about_us">
+        <div class="gallery">
+            <img class="contact-image" src="/static/img/pexels-pixabay-355952.jpg" alt="about image 2">
+            <div class="desc">{{ gallery_descriptions[1] }}</div>
+        </div>
+    </div>
+
+    <div class="responsive_about_us">
+        <div class="gallery">
+            <img class="contact-image" src="/static/img/brooke-cagle-WHWYBmtn3_0-unsplash.jpg" alt="about image 3">
+            <div class="desc">{{ gallery_descriptions[2] }}</div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <hr class="section-divider">
+    <!-- End of gallery "Why Us"-->
+</div>

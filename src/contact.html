@@ -1,0 +1,94 @@
+---
+title: Contact
+layout: default
+permalink: /contact/
+email: testtt@test.com
+phone: +1 (647) 567-890
+---
+
+<div class="main-content">
+    <section class="contact-wrapper">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p><strong>Phone:</strong><br><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p><strong>Email:</strong><br><a href="mailto:info@miacademy.com">info@miacademy.com</a></p>
+        </div>
+
+        <form id="contact-form-script" class="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <label for="course">Select a Course:</label>
+            <select id="course" name="course" required>
+                <option value="" disabled selected>Select a course</option>
+                <option value="PMP® Exam Prep Course">PMP® Exam Prep Course</option>
+                <option value="CAPM® Exam Prep Course">CAPM® Exam Prep Course</option>
+                <option value="ScrumMaster Exam Prep Course">ScrumMaster Exam Prep Course</option>
+                <option value="Predictive Projects Simulation Course">Predictive Projects Simulation Course</option>
+                <option value="Ms Project & Excel Training">Ms Project & Excel Training</option>
+                <option value="Digital Skills for Project Managers">Digital Skills for Project Managers</option>
+            </select>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <img class="contact-image" src="/static/img/annie-spratt-goholCAVTRs-unsplash.jpg" alt="contact background">
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show');
+        }
+
+        const form = document.getElementById('contact-form-script');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const courseSelect = document.getElementById('course');
+            if (!courseSelect.value) {
+                alert('Please select a course.');
+                return;
+            }
+
+            const formData = new FormData(form);
+            const params = new URLSearchParams();
+            for (const [key, value] of formData.entries()) {
+                params.append(key, value);
+            }
+
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyv9UsIdg8GIB1tWs3Noc19aQUPiQHS6XToOX0ylKtSmhXabmdFkdGoZy1hmyYbMoyE/exec';
+
+            try {
+                const response = await fetch(scriptURL, {
+                    method: 'POST',
+                    body: params,
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                });
+
+                if (response.ok) {
+                    alert('Message sent!');
+                    form.reset();
+                } else {
+                    alert('Failed to send message.');
+                }
+            } catch (error) {
+                console.error('Error!', error.message);
+                alert('Something went wrong.');
+            }
+        });
+
+    </script>
+
+    <!--<hr class="section-divider">-->
+
+    <!-- Contact Ends -->
+</div>

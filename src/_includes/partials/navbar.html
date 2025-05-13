@@ -1,12 +1,12 @@
-<div class="{{ 'lg:fixed' if path == 'home' }} w-full">
+<!--<div class="{{ 'lg:fixed' if path == 'home' }} w-full">
     <nav class="flex items-center justify-center lg:justify-between flex-wrap p-6 lg:px-0 container mx-auto" x-data="{ isOpen: false }" @keydown.escape="isOpen = false"  @click.away="isOpen = false">
-        <!--Logo etc-->
+        Logo etc
         <div class="flex items-center">
             <a href="/" class="text-indigo-500 font-bold text-lg">
                 Logo</a>
         </div>
 
-        <!--Toggle button (hidden on large screens)-->
+        Toggle button (hidden on large screens)
         <button @click="isOpen = !isOpen" type="button" class="ml-auto block lg:hidden px-2 text-primary-500 hover:text-primary-500 focus:outline-none focus:text-primary-500" :class="{ 'transition transform-180': isOpen }" aria-label="Menu">
             <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
                 <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
@@ -14,7 +14,7 @@
             </svg>
         </button>
 
-        <!--Menu-->
+        Menu
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto text-center " :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" x-show.transition="true">
 
             {% if navigation.items %}
@@ -30,4 +30,40 @@
             {% endif %}
         </div>
     </nav>
-</div>
+</div>-->
+<header>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <!--<a href="index.html">MiAcademy-->
+                    <a href="/index.html">
+                        <img src="/static/img/miacademy-high-resolution-logo-transparent (1).png" alt="MiAcademy logo">
+
+                    </a>
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    ☰
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="/courses/">Courses ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/PMP-Training/">PMP® Exam Prep Course</a></li>
+                            <li><a href="/CAPM-Training/">CAPM® Exam Prep Course</a></li>
+                            <li><a href="/scrummaster-exam-prep-course/">ScrumMaster Exam Prep Course</a></li>
+                            <li><a href="/predictive-projects-simulation-course/">Predictive Projects Simulation Course</a></li>
+                            <li><a href="/microsoft-trainings-course/">Ms Project & Excel Training</a></li>
+                            <li><a href="/digital-skills-for-project-managers/">Digital Skills for Project Managers</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+</header>

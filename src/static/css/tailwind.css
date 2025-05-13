@@ -88,6 +88,12 @@ main {
   text-align: center;
 }
 
+@media only screen and (max-width: 500px) {
+  .intro h1 {
+    line-height: 1;
+  }
+}
+
 .intro p {
   font-size: 1.2em;
 }

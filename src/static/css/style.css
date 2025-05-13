@@ -88,6 +88,12 @@ main {
     font-size: 1.2em;
 }
 
+@media only screen and (max-width: 500px) {
+    .intro h1 {
+        line-height: 1;
+    }
+}
+
 .courses {
     margin-top: 30px;
 }
